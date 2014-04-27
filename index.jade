@@ -3,6 +3,7 @@ html
     meta(charset='utf-8')
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
     meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(name="description", content="This project was conceived with the goal of bringing simplicity and elegance to Wordpress.")
     title Themes Kult
 
     //Bootstrap 
@@ -27,18 +28,18 @@ html
           span.t Themes 
           span.k Kult
  
+        p.p-1 This project was conceived with the goal of bringing simplicity and elegance to Wordpress. 
+        p.p-2 I create designs that prioritize clarity in reading, simplicity in access to content, and customizability.
+
         nav 
           ul 
             li 
-              a(href="http://twitter.com/gravityonmars", target="_blank") Follow me
+              a(href="http://twitter.com/gravityonmars", target="_blank").btn Follow me
 
             li 
-              a(href="mailto:rickyrauch@gmail.com") Contact Me
+              a(href="mailto:rickyrauch@gmail.com").btn Contact
 
 
-
-        p This project was conceived with the goal of bringing simplicity and elegance to Wordpress. 
-        p I create designs that prioritize clarity in reading, simplicity in access to content, and customizability.
 
 
       section.main
@@ -46,13 +47,16 @@ html
         .row 
           .col-sm-7
             .theme-large.theme.urban
+              .theme-img 
+                img(src="img/urban.png")
               .overlay
                 span.theme-title Urban Theme
                 a(href='https://gum.co/vuTr', target="_blank").btn Download
 
           .col-sm-5
             .theme-small.theme.wpomatic
-
+              .theme-img
+                img(src="img/wpomatic.png")
               .overlay
                 span.theme-title wp-o-matic
                 em Autoblogging a snap by automatically creating posts from the RSS/Atom feeds you choose
@@ -61,32 +65,25 @@ html
         .row 
           .col-sm-5
             .theme-small.theme.symbol
-
+              .theme-img
+                img(src="img/symbol.png")
               .overlay
                 span.theme-title Symbol
                 a(href="https://gum.co/zmYyK", target="_blank").btn Download
 
           .col-sm-7
             .theme-large.theme.sidebar
-
+              .theme-img 
+                img(src="img/sidebar.png")
               .overlay
                 span.theme-title Sidebar
                 a(href="https://gum.co/qoBEB", target="_blank").btn Download
 
 
-        .row 
+        .row.statement
           .col-sm-12
             strong Statement: 
             span I don't give free support anymore. 
-
-    .donate
-      h5 Yearly Donations
-      .bar
-        .bar-progress
-      p.values 
-        span.value-0 $0 
-        span.value-40 $4,151
-        span.value-100 $12,000
 
 
     script(type='text/javascript', src='https://gumroad.com/js/gumroad.js')

@@ -1,5 +1,13 @@
+/*=====================================================
+=            Themes Kult by Ricardo Rauch            =
+=====================================================*/
+
+
+/*==========  Vars  ==========*/
 color_site = #50E3C2;
 
+
+/*==========  General Rules  ==========*/
 html, body
 	background: black;
 
@@ -69,52 +77,66 @@ h1,h2,h3,h5,.btn
 				opacity: 0;
 
 			.t
-				-webkit-animation: text_logo .6s ease-in 1s;
-				-webkit-animation-fill-mode: forwards;
+				-webkit-animation: text_logo .6s ease-in 1s forwards;
 
 			.k 
-				-webkit-animation: text_logo .6s ease-in 1.5s;
-				-webkit-animation-fill-mode: forwards;
+				-webkit-animation: text_logo .6s ease-in 1.5s forwards;
 
 
 		nav 
 			position: fixed;
 			right: 0;
 			top: 0;
-			padding: 20px 30px;
+			// padding: 20px 30px;
 			display: block
 			opacity: 0;
 			font-size: 13px;
-			-webkit-animation: theme_animation .3s ease-in 6s;
-			-webkit-animation-fill-mode: forwards;
+			-webkit-animation: header_top 1s ease-in 10s forwards;
 			ul 
 				list-style: none;
 				margin: 0;
 				padding: 0;
+				margin-top: 20px;
+				margin-bottom: 40px;
+				overflow: hidden
 				li 
-					margin-left: 40px;
-					float: left
+					margin-right: 20px;
+					display: inline-block
 
 
 		p
 			opacity: 0;
-			-webkit-animation: theme_animation 1s ease-in 3s;
-			-webkit-animation-fill-mode: forwards;
+			&.p-1
+				-webkit-animation: theme_animation 1s ease-in 3s forwards;
+			&.p-2
+				-webkit-animation: theme_animation 1s ease-in 4s forwards;
 
-
-
-	.row 
-		margin-bottom: 3%;
 
 	.theme 
-		background: #222 url('img/urban.png') no-repeat;
+		background: #222;
 		height: 300px;
 		width: 100%;
+		overflow: hidden
 		position: relative;
-
+		margin-bottom: 5%;
 		opacity: 0;
-		-webkit-animation: theme_animation .5s ease-in 7s;
 		-webkit-animation-fill-mode: forwards;
+
+		&:hover 
+			img 
+				-webkit-transform: scale(1.2);
+				-webkit-filter: blur(10px);
+				
+
+		.theme-img 
+			overflow: hidden
+			img
+				max-width: 100%;
+				display: block
+				-webkit-transition: all .6s ease-in-out;
+				-webkit-filter: grayscale(1);
+
+				-webkit-animation: make_color .5s ease-in 12s forwards;
 
 
 		.overlay 
@@ -129,12 +151,12 @@ h1,h2,h3,h5,.btn
 			font-family: "freight-sans-pro";
 			opacity: 0;
 			cursor: pointer;
-			-webkit-transition: all 0.3s linear;
-
+			-webkit-transition: all 0.2s linear;
 			&:hover 
 				opacity: 1;
 				color: white;
 				
+
 
 			span.theme-title
 				text-transform: uppercase
@@ -148,27 +170,27 @@ h1,h2,h3,h5,.btn
 				margin-bottom: 20px;
 
 
-		&.theme-small
-			// width: 25%;
-
-
-		&.theme-large
-			// width: 65%;
-
 		&.urban 
-			background-image: url('img/urban.png')
-			background-position: 10px 20px
-			background-size: 600px;
+			-webkit-animation: theme_animation .5s ease-in 6s forwards;
+
+			.theme-img 
+				img
+					margin: 20px auto;
+					max-width: 90%;
 
 		&.sidebar 
-			background-image: url('img/sidebar.png?asd')
-			background-position: left 20px
-			background-size: 800px;
+			-webkit-animation: theme_animation .5s ease-in 9s forwards;
+
+			.theme-img 
+				img 
+					max-width: 140%;
+					margin: 20px;
+
 
 		&.wpomatic 
-			background-image: url('img/wpomatic.png')
-			background-position: center
-			background-size: 80%;
+			-webkit-animation: theme_animation .5s ease-in 7s forwards;
+
+
 			span.theme-title
 				margin-bottom: 10px;
 				margin-top: 100px;
@@ -184,80 +206,22 @@ h1,h2,h3,h5,.btn
 				opacity: .8;
 				margin-bottom: 20px
 
+			.theme-img 
+				img 
+					max-width: 80%;
+					margin: 60px auto;
+
 		&.symbol 
-			background-image: url('img/symbol.png')
-			background-position:   center -40px
-			background-size: 200%;
+			-webkit-animation: theme_animation .5s ease-in 8s forwards;
+
+
+.statement
+	opacity: 0;
+	-webkit-animation: theme_animation .5s ease-in 10s forwards;
 
 
 
-.donate 
-	position: fixed;
-	top: 10px;
-	width: 320px;
-	right: 10px;
-	padding: 0 20px;
-	font-family: "freight-sans-pro";
-	display: none
-
-	h5 
-		font-size: 11px;
-		color: #999;
-
-		opacity: 0;
-		-webkit-animation: theme_animation .5s ease-in 9s;
-		-webkit-animation-fill-mode: forwards;
-
-
-	.bar 
-		background: #333;
-		border-radius: 100px;
-		margin-bottom: 3px;
-
-		opacity: 0;
-		-webkit-animation: theme_animation .5s ease-in 8s;
-		-webkit-animation-fill-mode: forwards;
-
-
-		.bar-progress
-			height: 8px;
-			border-radius: 100px;
-			background: linear-gradient(120deg,  #50E3C2 0%, #cd78d1 100%); /* W3C */
-			width: 0;
-			-webkit-animation: bar_growing 1.5s ease-in 10s;
-			-webkit-animation-fill-mode: forwards;
-
-	.values 	
-		font-size: 10px;
-		color: #666;
-		font-family: "Helvetica Neue"
-		opacity: 0;
-		-webkit-animation: theme_animation .5s ease-in 12s;
-		-webkit-animation-fill-mode: forwards;
-
-		span 
-			display: inline-block
-
-		span.value-0
-			width: 27%;
-
-		span.value-100
-			text-align: right
-			display: inline-block
-			float: right
-
-	&:hover 
-		.values 
-			display: block
-
-	a.donate-btn 
-		margin-top: 4px;
-		display: block
-		text-align: center
-		margin-top: 10px;
-		opacity: 0;
-		-webkit-animation: theme_animation .5s ease-in 13s;
-		-webkit-animation-fill-mode: forwards;
+/*==========  KeyFrames  ==========*/
 
 @keyframes theme_animation 
 	0% 
@@ -283,27 +247,51 @@ h1,h2,h3,h5,.btn
 		opacity: 1;
 
 
-
-@keyframes donate_animation 
+@keyframes header_top 
 	0% 
+		top: -100px;
 		opacity: 0;
-		-webkit-transform: translateZ(120deg); 
-
-	30% 
-		opacity: 0.3;
 
 	100% 
+		top: 0;
 		opacity: 1;
-		-webkit-transform: translateZ(0); 
 
 
-@keyframes bar_growing 
+@keyframes make_color 
 	0% 
-		width: 0;
+		-webkit-filter: grayscale(1);
 
 
 	100% 
-		width: 34%;
+		-webkit-filter: grayscale(0);
 
 
+/*==========  Media Queries  ==========*/
+
+
+@media screen and (max-width: 568px)
+	body 
+		text-align: center
+	.content 
+		header 
+			nav 
+				position: static;
+
+		.theme 
+			position: static;
+			height: auto;
+			.theme-img 
+				img 
+					max-width: 100%;
+					max-height: 100%;
+			.overlay
+				opacity:1;
+				position: static;
+				// border-bottom: 1px solid white;
+				padding: 20px;
+				background-color: rgba(0,0,0,.4)
+
+				span.theme-title
+					margin: 0;
+					margin-bottom: 10px;
 
