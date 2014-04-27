@@ -124,14 +124,14 @@ h5,
 }
 .content .theme .theme-img {
   overflow: hidden;
+  -webkit-filter: grayscale(1);
+  -webkit-animation: make_color 0.5s ease-in 12s forwards;
 }
 .content .theme .theme-img img {
   max-width: 100%;
   display: block;
   -webkit-transition: all 0.7s ease-in-out;
   -webkit-transform: scale(1);
-  -webkit-filter: grayscale(1);
-  -webkit-animation: make_color 0.5s ease-in 12s forwards;
 }
 .content .theme:hover .theme-img img {
   -webkit-transform: scale(1.1);
