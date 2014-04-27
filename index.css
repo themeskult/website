@@ -122,19 +122,20 @@ h5,
   opacity: 0;
   -webkit-animation-fill-mode: forwards;
 }
-.content .theme:hover img {
-  -webkit-transform: scale(1.2);
-  -webkit-filter: blur(10px);
-}
 .content .theme .theme-img {
   overflow: hidden;
 }
 .content .theme .theme-img img {
   max-width: 100%;
   display: block;
-  -webkit-transition: all 0.6s ease-in-out;
+  -webkit-transition: all 0.7s ease-in-out;
+  -webkit-transform: scale(1);
   -webkit-filter: grayscale(1);
   -webkit-animation: make_color 0.5s ease-in 12s forwards;
+}
+.content .theme:hover .theme-img img {
+  -webkit-transform: scale(1.1);
+  -webkit-filter: blur(5px);
 }
 .content .theme .overlay {
   background: rgba(0,0,0,0.9);
@@ -148,7 +149,7 @@ h5,
   font-family: "freight-sans-pro";
   opacity: 0;
   cursor: pointer;
-  -webkit-transition: all 0.2s linear;
+  -webkit-transition: all 0.4s linear;
 }
 .content .theme .overlay:hover {
   opacity: 1;

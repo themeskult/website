@@ -122,21 +122,24 @@ h1,h2,h3,h5,.btn
 		opacity: 0;
 		-webkit-animation-fill-mode: forwards;
 
-		&:hover 
-			img 
-				-webkit-transform: scale(1.2);
-				-webkit-filter: blur(10px);
-				
 
 		.theme-img 
 			overflow: hidden
 			img
 				max-width: 100%;
 				display: block
-				-webkit-transition: all .6s ease-in-out;
+				-webkit-transition: all .7s ease-in-out;
+				-webkit-transform: scale(1) 
 				-webkit-filter: grayscale(1);
-
 				-webkit-animation: make_color .5s ease-in 12s forwards;
+
+
+		&:hover 
+			.theme-img 
+				img 
+					-webkit-transform: scale(1.1);
+					-webkit-filter: blur(5px);
+					
 
 
 		.overlay 
@@ -151,7 +154,7 @@ h1,h2,h3,h5,.btn
 			font-family: "freight-sans-pro";
 			opacity: 0;
 			cursor: pointer;
-			-webkit-transition: all 0.2s linear;
+			-webkit-transition: all 0.4s linear;
 			&:hover 
 				opacity: 1;
 				color: white;
