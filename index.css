@@ -12,7 +12,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
   font-size: 15px;
-  font-family: "freight-text-pro";
   font-family: "calluna";
 }
 a {
@@ -55,6 +54,7 @@ h5,
   bottom: 0;
   top: 0;
   width: 4px;
+  z-index: 10000;
 }
 .content {
   margin: 10%;
@@ -190,12 +190,14 @@ h5,
 .content .theme.wpomatic em {
   font-size: 12px;
   display: block;
-  padding: 0 40px;
+  padding: 0 10px;
+  max-width: 300px;
   font-weight: normal;
   font-family: "freight-text-pro";
   font-style: normal;
   font-size: 14px;
   opacity: 0.8;
+  margin: auto;
   margin-bottom: 20px;
 }
 .content .theme.wpomatic .theme-img img {
@@ -215,8 +217,21 @@ h5,
   body {
     text-align: center;
   }
+  .bg-header {
+    top: 0;
+    width: 100%;
+    height: 6px;
+    right: 0;
+  }
+  .content header {
+    margin-bottom: 10px;
+  }
   .content header nav {
     position: static;
+    margin-top: 10px;
+  }
+  .content header nav ul li {
+    margin: 0 10px;
   }
   .content .theme {
     position: static;
