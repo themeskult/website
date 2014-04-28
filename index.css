@@ -57,7 +57,7 @@ h5,
   z-index: 10000;
 }
 .content {
-  padding: 10%;
+  margin: 10%;
   max-width: 1000px;
 }
 .content .container {
@@ -222,6 +222,10 @@ h5,
     margin-top: 6px;
   }
   .bg-header {
+    top: 0;
+    width: 100%;
+    height: 6px;
+    right: 0;
     display: none;
   }
   .content header {
